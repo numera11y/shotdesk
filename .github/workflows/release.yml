@@ -18,7 +18,7 @@ jobs:
           - platform: windows-latest
             args: "--bundles nsis,msi"
           - platform: ubuntu-24.04
-            args: "--bundles deb,appimage"
+            args: "--bundles deb,rpm"
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v7
@@ -27,7 +27,7 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential curl file libayatana-appindicator3-dev libssl-dev libwebkit2gtk-4.1-dev libxdo-dev librsvg2-dev patchelf
+          sudo apt-get install -y build-essential curl file libayatana-appindicator3-dev libssl-dev libwebkit2gtk-4.1-dev libxdo-dev librsvg2-dev patchelf rpm
 
       - uses: actions/setup-node@v7
         with:
@@ -49,7 +49,7 @@ jobs:
         with:
           tagName: ${{ github.ref_name }}
           releaseName: "ShotDesk ${{ github.ref_name }}"
-          releaseBody: "Review the changelog and platform validation notes before publishing this preview."
+          releaseBody: "Windows NSIS .exe/.msi and Linux .deb/.rpm preview packages. Read TESTING.md before testing; Linux packages are built on Ubuntu 24.04 and need validation on your distribution. Review CHANGELOG.md and known issues before publishing."
           releaseDraft: true
           prerelease: true
           args: ${{ matrix.args }}

@@ -2,9 +2,9 @@
 
 All notable user-facing changes to ShotDesk will be documented in this file.
 
-No application releases have been published yet.
-
 ## [Unreleased]
+
+## [0.1.0] - 2026-11-02
 
 ### Added
 
@@ -16,4 +16,5 @@ No application releases have been published yet.
 - Full-image viewer with previous/next keyboard navigation and Escape to close; combinable date, folder, and color filters; per-folder reanalysis with inline metadata/OCR error details.
 - Manual collections with descriptions, capture membership, rename, and delete actions, all stored in the local database.
 - A bilingual product website in a separate repository, deployed to GitHub Pages.
-- Windows x64 NSIS/MSI release pipeline and a Linux package pipeline awaiting validation on a Linux host.
+- Windows NSIS `.exe`/MSI installable packages and Linux Debian `.deb`/RPM `.rpm` packages for preview testing.
+- A manual package-check workflow that uploads temporary Windows/Linux test artifacts without creating a release.
