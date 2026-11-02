@@ -1,0 +1,34 @@
+name: Bug report
+description: Report a reproducible problem in ShotDesk.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: ShotDesk version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system
+      placeholder: Windows 11 x64
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: Do not attach private screenshots, image libraries, database files, or model files. Use synthetic examples when an image is needed.
