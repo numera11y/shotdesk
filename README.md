@@ -6,6 +6,8 @@ ShotDesk turns folders of screenshots into a searchable library on your computer
 
 [Download the v0.1.0 preview](https://github.com/numera11y/shotdesk/releases/tag/v0.1.0) · [Product overview](https://numera11y.github.io/shotdesk-site/) · [Report a problem](https://github.com/numera11y/shotdesk/issues)
 
+[![Version](https://img.shields.io/github/v/tag/numera11y/shotdesk?label=version)](https://github.com/numera11y/shotdesk/releases/tag/v0.1.0)
+[![License](https://img.shields.io/github/license/numera11y/shotdesk)](LICENSE)
 [![CI](https://github.com/numera11y/shotdesk/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/numera11y/shotdesk/actions/workflows/ci.yml)
 
 > **Early preview:** ShotDesk 0.1.0 is available for testing. Read the [release notes](https://github.com/numera11y/shotdesk/releases/tag/v0.1.0) and [testing checklist](TESTING.md) before installing.
