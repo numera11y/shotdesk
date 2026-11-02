@@ -6,7 +6,7 @@ const tauriConfig = JSON.parse(readFileSync("src-tauri/tauri.conf.json", "utf8")
 const cargoManifest = readFileSync("src-tauri/Cargo.toml", "utf8");
 const cargoLock = readFileSync("src-tauri/Cargo.lock", "utf8");
 const cargoVersion = cargoManifest.match(/^\[package\][\s\S]*?^version\s*=\s*"([^"]+)"/m)?.[1];
-const lockVersion = cargoLock.match(/^\[\[package\]\]\nname = "shotdesk"\nversion = "([^"]+)"/m)?.[1];
+const lockVersion = cargoLock.match(/^\[\[package\]\]\r?\nname = "shotdesk"\r?\nversion = "([^"]+)"/m)?.[1];
 const versions = {
   "package.json": packageJson.version,
   "package-lock.json": packageLock.packages?.[""]?.version,
@@ -23,7 +23,7 @@ if ([...distinct].length !== 1 || Object.values(versions).some((version) => !ver
 }
 
 const expectedTag = `v${packageJson.version}`;
-const tag = process.env.GITHUB_REF_NAME;
+const tag = process.env.GITHUB_REF_TYPE === "tag" ? process.env.GITHUB_REF_NAME : undefined;
 if (tag && tag !== expectedTag) {
   console.error(`Tag ${tag} does not match the app version (${expectedTag}).`);
   process.exit(1);
