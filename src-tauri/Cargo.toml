@@ -13,7 +13,7 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2", features = [] }
 
 [dependencies]
-base64 = "0.22"
+base64 = "0.23"
 image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp", "gif", "bmp", "tiff"] }
 kamadak-exif = "0.6.1"
 # rapidocr-core 0.2.2 uses the ONNX Runtime rc12 Session API; keep this exact version until upstream updates.
