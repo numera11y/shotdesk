@@ -16,7 +16,7 @@ Check them with `npm run check:version`. Do not update `Cargo.lock` by hand; run
 
 1. Move the shipped changes from `CHANGELOG.md`'s `Unreleased` section into a dated version heading. Document known issues and supported targets.
 2. Update all version fields above to the same version, then run the version check, frontend build, Rust formatting check, and Rust tests.
-3. Build and install the Windows artifacts on Windows. Build and test Linux packages on a Linux host; Linux has not yet been validated.
+3. Build and install the Windows artifacts on Windows. Build Linux artifacts on Ubuntu 24.04, then test installation on every Linux distribution declared in the release notes; Linux has not yet been validated.
 4. Verify SQLite migration from the previous release and confirm that user images, metadata, OCR, and collection membership remain local.
 5. Commit the release preparation, create an annotated `v<version>` tag, and push the commit and tag.
 

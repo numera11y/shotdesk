@@ -40,4 +40,4 @@ The first run downloads the model set into the supplied cache and prints recogni
 
 Build distributable Windows/Linux artifacts with `npm run desktop:build` on an appropriately configured build host. The current Tauri bundle targets are NSIS/MSI, Debian packages, and AppImage. See [RELEASING.md](RELEASING.md) for version and release preparation; public releases are created as GitHub draft pre-releases from version tags.
 
-The current native build and OCR smoke test have been verified on Windows x64. Linux targets are configured but have not yet been built or tested on a Linux host.
+The current native build and OCR smoke test have been verified on Windows x64. Linux package builds are configured for Ubuntu 24.04; installation and compatibility have not yet been validated across Linux distributions.
